@@ -40,7 +40,7 @@ function DNSRevelation(opts) {
     this._loopback = !!opts.loopback
     this._listening = false
     this._id = crypto.randomBytes(32).toString('base64')
-    this._domain = opts.domain || 'dns-discovery.local'
+    this._domain = opts.domain || 'ddns.local'
     this._pushDomain = 'push.' + this._domain
     this._tokens = new Array(this.servers.length)
     this._tokensAge = []

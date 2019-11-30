@@ -7,7 +7,7 @@ freePort(function(port) {
         var rev1 = revelation()
         var rev2 = revelation()
         var ns = Math.random().toString(16) + '-' + process.pid
-        var appName = 'dns-discovery-' + ns
+        var appName = 'dns-revelation-' + ns
 
         rev2.on('peer', function(name, peer) {
             rev1.destroy()
@@ -241,7 +241,7 @@ freePort(function(port) {
         var client2 = revelation({ server: 'localhost:' + port })
         var client1 = revelation({ server: 'localhost:' + port })
         var ns = Math.random().toString(16) + '-' + process.pid
-        var appName = 'dns-discovery-' + ns
+        var appName = 'dns-revelation-' + ns
         var missing = 2
 
         server.on('peer', function(name, peer) {
